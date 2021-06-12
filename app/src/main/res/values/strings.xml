@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">studyProject01</string>
+
+    <!--Home-->
+    <string name="text_normal_recycler_view">RecyclerView Basic</string>
+    <string name="text_recycler_with_room">RecyclerView with Room</string>
+
+    <!--Item-->
+    <string name="text_item_book_name_dummy">5 centimeters per second</string>
+
+
 </resources>
