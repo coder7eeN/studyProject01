@@ -7,6 +7,7 @@
 
     <!--Item-->
     <string name="text_item_book_name_dummy">5 centimeters per second</string>
-
+    <string name="text_button_insert">Insert</string>
+    <string name="text_button_update">Update</string>
 
 </resources>

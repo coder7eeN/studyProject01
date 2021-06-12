@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.huypham.studyproject01.R
 import com.huypham.studyproject01.ui.basic.RecyclerBasicActivity
+import com.huypham.studyproject01.ui.room.RecyclerRoomActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 /**
@@ -26,7 +27,8 @@ class HomeActivity: AppCompatActivity() {
         }
 
         btnRoom.setOnClickListener {
-//            startActivity(Intent(this))
+            startActivity(Intent(this, RecyclerRoomActivity::class.java))
         }
     }
+
 }

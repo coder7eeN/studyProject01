@@ -3,7 +3,9 @@ package com.huypham.studyproject01.ui.basic
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.huypham.studyproject01.R
 import com.huypham.studyproject01.data.Book
 import kotlinx.android.synthetic.main.activiy_recycler_basic.*
@@ -25,7 +27,7 @@ class RecyclerBasicActivity: AppCompatActivity() {
     }
 
     private fun initBasicAdapter() {
-        basicAdapter = RecyclerBasicAdapter(this, createData())
+        basicAdapter = RecyclerBasicAdapter(this, books)
         basicAdapter.onClickBasicItem = {
             Toast.makeText(this, "Item position $it", Toast.LENGTH_SHORT).show()
         }
@@ -35,12 +37,12 @@ class RecyclerBasicActivity: AppCompatActivity() {
         rvBasic.layoutManager = LinearLayoutManager(this)
         rvBasic.setHasFixedSize(true)
         rvBasic.adapter = basicAdapter
-//        createData()
-//        basicAdapter.notifyDataSetChanged()
+        createData()
+        basicAdapter.notifyDataSetChanged()
     }
 
     private fun createData(): MutableList<Book> {
-        for (index in 0..17) {
+        for (index in 0..10) {
             var isRead = false
             if (index % 2 == 0) {
                 isRead = true
